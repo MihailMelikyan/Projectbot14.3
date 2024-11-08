@@ -54,14 +54,15 @@ async def main_menu(message):
 @dp.message_handler(text='Купить')
 async def get_buying_list(message):
     with open('files/vit1.png', "rb") as img:
-        await message.answer_photo(img, 'Название: Product 1 | Описание: : женьшень в капсулах | Цена: <number * 100>')
+        await message.answer_photo(img, 'Название: Product 1 | Описание: : Солгар натуральный растительный комплекс |'
+                                        ' Цена: 2139 р ')
     with open('files/vit2.png', "rb") as img2:
-        await message.answer_photo(img2, 'Название: Product 2 | Описание: комплекс мультивитаминов |'
-                                         ' Цена: <number * 100>')
+        await message.answer_photo(img2, 'Название: Product 2 | Описание: Солгар комплекс мультивитаминов |'
+                                         ' Цена: 2596 р')
     with open('files/vit3.png', "rb") as img3:
-        await message.answer(img3, 'Название: Product 3 | Описание: omega 3 "рыбий жыр" | Цена: <number * 100>')
+        await message.answer_photo(img3, 'Название: Product 3 | Описание: Солгар витамин C 500 mg" | Цена: 1145 р')
     with open('files/vit4.png', "rb") as img4:
-        await message.answer(img4, 'Название: Product 4 | Описание: taraks-flex | Цена: <number * 100>')
+        await message.answer_photo(img4, 'Название: Product 4 | Описание: Солгар MULTI-ONE | Цена: 1888 р')
     await message.answer("Выберите продукт для покупки:", reply_markup=kb_prod)
 
 
